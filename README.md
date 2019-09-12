@@ -4,7 +4,6 @@ Export query sql to csv format
 
 ## Populate Argument
 
-|---|---|
 | parameter | meaning |
 |---|---|
 | -j <jdbcur>      | jdbc connection |
