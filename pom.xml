@@ -3,10 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>ramdan.file</groupId>
     <artifactId>sqlcsv</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <build>
         <plugins>
             <plugin>
@@ -39,9 +38,6 @@
             </plugin>
         </plugins>
     </build>
-
-
-
     <dependencies>
         <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
@@ -49,7 +45,11 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.17</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.6</version>
+        </dependency>
         <dependency>
             <groupId>oracle</groupId>
             <artifactId>ojdbc6</artifactId>
@@ -62,30 +62,11 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <!-- https://docs.oracle.com/middleware/1213/core/MAVEN/config_maven_repo.htm#MAVEN9015 -->
     <repositories>
         <repository>
             <id>datanucleus</id>
             <url>http://www.datanucleus.org/downloads/maven2</url>
         </repository>
     </repositories>
-<!--    <repositories>-->
-<!--        <repository>-->
-<!--            <id>maven.oracle.com</id>-->
-<!--            <releases>-->
-<!--                <enabled>true</enabled>-->
-<!--            </releases>-->
-<!--            <snapshots>-->
-<!--                <enabled>false</enabled>-->
-<!--            </snapshots>-->
-<!--            <url>https://maven.oracle.com</url>-->
-<!--            <layout>default</layout>-->
-<!--        </repository>-->
-<!--    </repositories>-->
-<!--    <pluginRepositories>-->
-<!--        <pluginRepository>-->
-<!--            <id>maven.oracle.com</id>-->
-<!--            <url>https://maven.oracle.com</url>-->
-<!--        </pluginRepository>-->
-<!--    </pluginRepositories>-->
+
 </project>

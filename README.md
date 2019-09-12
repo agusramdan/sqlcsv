@@ -6,13 +6,13 @@ Export query sql to csv format
 
 | parameter | meaning |
 |---|---|
-| -j <jdbcur>      | jdbc connection |
-| -u <username>    | username |
-| -p <password>    | password |
-| -q <query>       | sql query |
-| -d <delimiter>   | delimiter |
+| -j jdbc-url      | jdbc connection |
+| -u username    | username |
+| -p password    | password |
+| -q query       | sql query |
+| -d delimiter   | delimiter |
 | -quote           | using quote |
-| -o <file>        | file output optional default std IO. |
+| -o file        | file output optional default std IO. |
 
 
 ### Sample
