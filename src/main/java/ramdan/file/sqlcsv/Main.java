@@ -1,6 +1,9 @@
 package ramdan.file.sqlcsv;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -102,6 +105,16 @@ public class Main {
         return queryProcessing;
     }
     private String getQuery(){
+        if(parameters.containsKey("-qf")){
+            try {
+                return new String(Files.readAllBytes(
+                        Paths.get(parameters.get("-qf")))
+                        , StandardCharsets.UTF_8);
+            } catch (Exception e) {
+                System.err.printf("Error load query file ");//e.printStackTrace();
+                System.exit(1);
+            }
+        }
         if(parameters.containsKey("-q")){
             return  parameters.get("-q");
         }else{
