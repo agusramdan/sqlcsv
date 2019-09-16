@@ -21,6 +21,11 @@ java -jar sqlcsv.jar -j "jdbc:oracle:thin:@localhost:1521:xe" -u oracle -p oracl
 
 ```
 
+### Runtime
 
+Minimum Running Requerement
+
+* JDK 7  
+* Heap space 256 Mb
 
 

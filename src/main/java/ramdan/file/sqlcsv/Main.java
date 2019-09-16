@@ -11,8 +11,6 @@ import java.util.Map;
 
 public class Main {
 
-    private  Map <String,String> parameters = new HashMap<>();
-
     private static String DEFAULT_JDBC = "jdbc:oracle:thin:@localhost:1521:xe";
     private static String DEFAULT_USER  = "oracle";
     private static String DEFAULT_PASSWORD = "oracle";
@@ -20,6 +18,7 @@ public class Main {
     private static String DEFAULT_JDBC_DRIVER = "oracle.jdbc.driver.OracleDriver";
     private static String DEFAULT_DELIMITER = ",";
 
+    private  Map <String,String> parameters = new HashMap<>();
     /**
      * Populate Argument
      * -j     : jdbc connection
