@@ -48,8 +48,8 @@ echo $PARAM
 
 HOME_SQLCSV=~/sqlcsv
 CURRENTDATE=`date +"%Y%m%d_%H%M%s"`
-GC_LOG_FILE="$HOME_SQLCSV/logs/gc-sqlcsv-${CURRENTDATE}.log"
+GC_LOG_FILE="$HOME_SQLCSV/log/gc-sqlcsv-${CURRENTDATE}.log"
 GC_LOG_OPTION="-verbosegc -XX:+HeapDumpOnOutOfMemoryError -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -Xloggc:$GC_LOG_FILE"
-VM_OPTION="-server $GC_LOG_OPTION -XX:+UseParallelGC -XX:+UseParallelOldGC  -Xmx80g -Xms256m -XX:NewRatio=1 -XX:SurvivorRatio=6 -XX:ParallelGCThreads=32 -XX:MaxGCPauseMillis=100 "
+VM_OPTION="-server $GC_LOG_OPTION -XX:+UseParallelGC -XX:+UseParallelOldGC -Xms256m -XX:MaxNewSize=1g -XX:NewRatio=1 -XX:SurvivorRatio=6 -XX:ParallelGCThreads=32 -XX:MaxGCPauseMillis=100 "
 
 java $VM_OPTION -jar $HOME_SQLCSV/sqlcsv.jar $PARAM
