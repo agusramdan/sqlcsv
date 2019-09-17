@@ -1,7 +1,5 @@
 #!/bin/sh
 #
-#
-#
 # ./sqlcsv.sh -j "jdbc:oracle:thin:@localhost:1522:xa" -u oracle -p oracle -quote -qf query.sql
 # ./sqlcsv.sh -driver "com.mysql.jdbc.Driver" -j "jdbc:mysql://localhost:3306/portal" -u root -nopassword -quote -qf query.sql
 # ./sqlcsv.sh -driver "com.mysql.cj.jdbc.Driver" -j "jdbc:mysql://localhost:3306/portal" -u root -nopassword -quote -qf query.sql
