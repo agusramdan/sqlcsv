@@ -114,12 +114,11 @@ public class Main {
                 System.err.printf("Error load query file ");//e.printStackTrace();
                 System.exit(1);
             }
-        }
+        }else
         if(parameters.containsKey("-q")){
             return  parameters.get("-q");
-        }else{
-            return DEFAULT_QUERY;
         }
+        return DEFAULT_QUERY;
     }
     private String getDelimiter(){
         if(parameters.containsKey("-d")){
